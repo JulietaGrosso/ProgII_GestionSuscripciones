@@ -21,8 +21,8 @@ public class Main {
 
         Suscripcion suscripcion5 = new Suscripcion(5, 25, TipoSuscripcion.FAMILIAR, 4567);
 
-        //para probar la exception
-       // Suscripcion suscripcion6 = new Suscripcion(6, 22, TipoSuscripcion.FAMILIAR, 55554);
+
+
 
 
         GestorSuscripciones gestorSuscripciones = new GestorSuscripciones();
@@ -33,8 +33,15 @@ public class Main {
         gestorSuscripciones.agregarSuscripcion(suscripcion3);
         gestorSuscripciones.agregarSuscripcion(suscripcion4);
         gestorSuscripciones.agregarSuscripcion(suscripcion5);
-        //gestorSuscripciones.agregarSuscripcion(suscripcion6);
 
+        //para probar la exception
+        try{
+            Suscripcion suscripcion6 = new Suscripcion(6, 22, TipoSuscripcion.FAMILIAR, 55554);
+            gestorSuscripciones.agregarSuscripcion(suscripcion6);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         //2-Listar todas las suscripciones, mostrando el tipo de plan y sus detalles.
 
